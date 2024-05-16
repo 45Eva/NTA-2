@@ -117,3 +117,10 @@ if __name__ == "__main__":
         print("Дискретний логарифм:", result_output)
     else:
         print("Дискретний логарифм не знайдено. Завершено за {} секунд.".format(execution_time_output))
+
+    start = datetime.now()
+    # Виклик функції алгоритму СПГ
+    x = silver_polig_hellman(alpha_input, beta_input, n_input)
+    stop = datetime.now()
+    print(f"Час виконання алгоритму СПГ : {stop - start}")
+    print("x =", x)
